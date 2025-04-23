@@ -4,9 +4,25 @@
     </div>
     <nav class="terminal-menu">
         <ul>
-            <li><a class="menu-item active" href="{{ route('homepage') }}">Homepage</a></li>
-            <li><a class="menu-item" href="">Login</a></li>
-            <li><a class="menu-item" href="">Register</a></li>
+            <li>
+                <a class="menu-item active" href="{{ route('homepage') }}">Homepage</a>
+            </li>
+            @guest
+            <li>
+                <a class="menu-item" href="{{ route('login') }}">Login</a>
+            </li>
+            <li>
+                <a class="menu-item" href="{{ route('register') }}">Register</a>
+            </li>
+            @endguest
+            @auth
+            <li>
+                <a class="menu-item" href="#" onclick="event.preventDefault(); document.querySelector('#logout').submit()">Logout</a>
+                <form method="POST" action="{{ route('logout') }}" id="logout">
+                @csrf
+                </form>
+            </li>
+            @endauth
         </ul>
     </nav>
 </div>

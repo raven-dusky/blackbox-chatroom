@@ -7,3 +7,9 @@
 .terminal-menu {
     margin-right: 25px;
 }
+
+/* Auth Forms */
+.auth-form {
+    margin: 0 auto;
+    max-width: 400px;
+}
