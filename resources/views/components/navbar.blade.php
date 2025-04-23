@@ -7,6 +7,9 @@
             <li>
                 <a class="menu-item active" href="{{ route('homepage') }}">Homepage</a>
             </li>
+            <li>
+                <a class="menu-item" href="{{ route('rules') }}">Rules</a>
+            </li>
             @guest
             <li>
                 <a class="menu-item" href="{{ route('login') }}">Login</a>

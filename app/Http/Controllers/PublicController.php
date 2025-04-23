@@ -10,4 +10,9 @@ class PublicController extends Controller
     {
         return view('index');
     }
+
+    public function rules()
+    {
+        return view('rules');
+    }
 }
