@@ -13,3 +13,28 @@
     margin: 0 auto;
     max-width: 400px;
 }
+
+/* Homepage */
+.terminal-card-welcome,
+.terminal-timeline-welcome {
+    margin: 50px auto;
+    width: 70vw;
+}
+
+/* Chat */
+.terminal-chat {
+    position: relative;
+    height: 100vh;;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+}
+
+.terminal-chat-input {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.terminal-chat-badge {
+    background-color: #d20962;
+}
