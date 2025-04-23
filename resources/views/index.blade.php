@@ -10,6 +10,9 @@
             Start a thought, reply to one, or just sit back and scroll.
             No pressure, no expectations. Just a shared space with open prompts.
             Glad you’re here.
+            <br>
+            <br>
+            ** All messages are encrypted and stored on our server. **
         </div>
     </div>
     @endguest

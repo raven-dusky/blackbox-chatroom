@@ -13,16 +13,18 @@ class Chat extends Component
 
     public function sendMessage()
     {
-        $this->validate([
-            'message' => 'required|string|max:65535',
-        ]);
+        if (!Auth::user()->is_banned) {
+            $this->validate([
+                'message' => 'required|string|max:65535',
+            ]);
 
-        Message::create([
-            'user_id' => Auth::id(),
-            'text' => Crypt::encryptString($this->message),
-        ]);
+            Message::create([
+                'user_id' => Auth::id(),
+                'text' => Crypt::encryptString($this->message),
+            ]);
 
-        $this->message = '';
+            $this->message = '';
+        }
     }
 
     public function deleteMessage($messageId)
@@ -30,6 +32,16 @@ class Chat extends Component
         $message = Message::find($messageId);
         if(Auth::user()->is_moderator) {
             $message->delete();
+        }
+    }
+
+    public function banChatMember($messageId)
+    {
+        $message = Message::find($messageId);
+        if(Auth::user()->is_moderator) {
+            $user = $message->user;
+            $user->is_banned = true;
+            $user->save();
         }
     }
 
