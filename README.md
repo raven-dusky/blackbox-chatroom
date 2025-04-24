@@ -22,3 +22,14 @@
 - Admins can promote any user to moderator using the command:
   ```bash
   php artisan app:make-user-moderator {id}
+
+## Setup
+```bash
+git clone https://github.com/your-username/blackbox.git
+cd blackbox
+composer install
+npm install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate:fresh --seed
+
