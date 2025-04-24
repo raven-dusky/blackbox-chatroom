@@ -9,7 +9,7 @@
 }
 
 /* Auth Forms */
-.auth-form {
+.terminal-auth-form {
     margin: 0 auto;
     max-width: 400px;
 }
@@ -37,4 +37,36 @@
 
 .terminal-chat-badge {
     background-color: #d20962;
+}
+
+/* Profile */
+.terminal-alert {
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+.termina-photo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 25px auto;
+    max-width: 700px;
+}
+
+.terminal-btn-photo-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.terminal-btn-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.termina-profile-info {
+    display: flex;
+    justify-content: center;
 }

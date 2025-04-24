@@ -7,6 +7,11 @@
             <li>
                 <a class="menu-item active" href="{{ route('homepage') }}">Homepage</a>
             </li>
+            @auth
+            <li>
+                <a class="menu-item" href="{{ route('profile') }}">Profile</a>
+            </li>
+            @endauth
             <li>
                 <a class="menu-item" href="{{ route('rules') }}">Rules</a>
             </li>

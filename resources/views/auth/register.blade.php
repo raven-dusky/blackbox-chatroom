@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="auth-form">
+    <div class="terminal-auth-form">
         <form method="POST" action="{{ route('register') }}">
             @csrf
             <fieldset>
